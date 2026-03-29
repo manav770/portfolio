@@ -89,12 +89,12 @@ function ProjectCard({
         ref={cardRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="project-card-glow rounded-2xl p-8 md:p-12 group"
+        className="project-card-glow rounded-2xl p-6 md:p-12 group"
         style={{ transformStyle: "preserve-3d", transition: "transform 0.18s ease, box-shadow 0.4s ease", willChange: "transform" }}
       >
-        <div className={`flex flex-col ${isImageRight ? "md:flex-row" : "md:flex-row-reverse"} gap-8 md:gap-12 items-center`}>
+        <div className={`flex flex-col ${isImageRight ? "md:flex-row" : "md:flex-row-reverse"} gap-6 md:gap-12 items-center`}>
           {/* Text side */}
-          <div className="md:w-1/2">
+          <div className="w-full md:w-1/2">
             <h3 className="text-foreground font-bold text-2xl md:text-3xl mb-5 tracking-tight">
               {project.title}
             </h3>
@@ -126,7 +126,7 @@ function ProjectCard({
           </div>
 
           {/* Image side */}
-          <div className="md:w-1/2">
+          <div className="w-full md:w-1/2">
             <div className="rounded-xl overflow-hidden image-glow group-hover:shadow-[0_12px_50px_-8px_hsl(0_0%_0%/0.8)] transition-shadow duration-500">
               <img
                 src={project.image}

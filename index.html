@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/portfolio/" />
+    <script>
+      // Restore path redirected by 404.html
+      (function () {
+        var p = window.location.search.match(/[?&]p=([^&]*)/);
+        if (p) history.replaceState(null, '', '/portfolio/' + decodeURIComponent(p[1]));
+      })();
+    </script>
     <title>Manav Kaushal — UI/UX Designer</title>
     <meta name="description" content="Portfolio of Manav Kaushal, a UI/UX Designer who loves turning ideas into design." />
     <meta name="author" content="Manav Kaushal" />

@@ -12,11 +12,7 @@ const PhilosophySection = () => {
           Good design doesn't start in Figma.
         </p>
         <p className="text-foreground/60 text-lg md:text-xl leading-[1.8] font-light">
-          It starts in everyday moments—
-          <br />
-          a confused user, a missed tap,
-          <br />
-          someone muttering{" "}
+          It starts in everyday moments— a confused user, a missed tap, someone muttering{" "}
           <span className="cursive-accent text-xl md:text-2xl">"why is this so hard?"</span>
         </p>
       </div>

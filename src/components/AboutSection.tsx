@@ -30,7 +30,6 @@ const AboutSection = () => {
           </p>
           <p className="text-muted-foreground text-lg leading-[1.8] font-light">
             Creativity is something that stays with me all the time —
-            <br />
             so much that{" "}
             <strong className="text-foreground font-semibold">
               design ideas occasionally visit me in my dreams.
@@ -42,26 +41,24 @@ const AboutSection = () => {
             </p>
             <p className="text-muted-foreground text-lg leading-[1.8] font-light">
               The sky, open spaces, and quiet moments often inspire the
-              <br />
               way I think about simplicity in design.
             </p>
           </div>
           <p className="text-muted-foreground text-lg leading-[1.8] font-light">
             And somewhere between ideas and inspiration, there's
-            <br />
             cricket — a game I love both on the screen and on the field.
           </p>
         </div>
 
         <div
           ref={imagesRef}
-          className="scroll-reveal flex justify-center gap-5 mt-12"
+          className="scroll-reveal flex justify-center gap-3 md:gap-5 mt-12"
           style={{ transitionDelay: "250ms" }}
         >
           {images.map((img, i) => (
             <div
               key={i}
-              className={`w-44 h-56 md:w-56 md:h-72 rounded-2xl overflow-hidden image-glow group cursor-pointer ${["float-1","float-2","float-3"][i]}`}
+              className={`w-[30vw] max-w-[11rem] h-[38vw] max-h-[14rem] md:w-56 md:h-72 rounded-2xl overflow-hidden image-glow group cursor-pointer ${["float-1","float-2","float-3"][i]}`}
             >
               <img
                 src={img.src}
