@@ -127,12 +127,21 @@ function ProjectCard({
 
           {/* Image side */}
           <div className="w-full md:w-1/2">
-            <div className="rounded-xl overflow-hidden image-glow group-hover:shadow-[0_12px_50px_-8px_hsl(0_0%_0%/0.8)] transition-shadow duration-500">
+            <div className="relative rounded-xl overflow-hidden image-glow group-hover:shadow-[0_12px_50px_-8px_hsl(0_0%_0%/0.8)] transition-shadow duration-500">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                className={`w-full group-hover:scale-[1.03] transition-transform duration-700 ease-out ${
+                  project.comingSoon ? "blur-sm scale-[1.03] brightness-50" : ""
+                }`}
               />
+              {project.comingSoon && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                  <span className="text-foreground/90 text-sm font-semibold tracking-widest uppercase">Coming Soon</span>
+                  <span className="w-8 h-px bg-foreground/30" />
+                  <span className="text-foreground/40 text-xs tracking-wider">Case study in progress</span>
+                </div>
+              )}
             </div>
           </div>
         </div>
