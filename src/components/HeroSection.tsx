@@ -58,7 +58,7 @@ const HeroSection = () => {
 
       {/* Background faded text */}
       <div
-        className={`absolute top-[15%] left-1/2 -translate-x-1/2 text-ghost font-black text-[4rem] sm:text-[7rem] md:text-[13rem] leading-none tracking-[-0.06em] select-none pointer-events-none whitespace-nowrap transition-all duration-[1.2s] ease-out ${
+        className={`absolute top-[12%] left-1/2 -translate-x-1/2 text-ghost font-black text-[4rem] sm:text-[7rem] md:text-[11rem] xl:text-[10rem] leading-none tracking-[-0.06em] select-none pointer-events-none whitespace-nowrap transition-all duration-[1.2s] ease-out ${
           loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
         aria-hidden="true"
@@ -81,7 +81,7 @@ const HeroSection = () => {
 
       {/* Big name */}
       <h1
-        className={`relative z-10 text-foreground font-black text-[3.8rem] sm:text-[5.5rem] md:text-[10rem] leading-[0.82] -mt-8 sm:-mt-12 md:-mt-20 tracking-[-0.05em] hero-name-shadow transition-all duration-[1s] ease-out delay-300 ${
+        className={`relative z-10 text-foreground font-black text-[3.8rem] sm:text-[5.5rem] md:text-[10rem] xl:text-[9rem] leading-[0.82] -mt-8 sm:-mt-12 md:-mt-20 tracking-[-0.05em] hero-name-shadow transition-all duration-[1s] ease-out delay-300 ${
           loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >

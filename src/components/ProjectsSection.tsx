@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { useRef } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useToast } from "@/hooks/use-toast";
 import projectSwoot from "@/assets/project-swoot.png";
 import projectVerdant from "@/assets/project-verdant.png";
 import projectLifeSage from "@/assets/life-sage.png";
@@ -10,26 +11,27 @@ const projects = [
     title: "Swoot",
     description:
       'Swoot is a <strong>sports-tech mobile application</strong> designed to simplify court booking and player engagement for racket sports like padel and pickleball. The platform allows players to discover courts, join matches, track performance, and participate in tournaments through a unified experience.',
-    roles: ["UX Research", "UI Design"],
+    roles: ["Experience Research", "Visual Design"],
     image: projectSwoot,
     imagePosition: "right" as const,
+    link: "https://www.behance.net/gallery/246989857/Application-Case-Study",
   },
   {
     title: "Verdant Equanim",
     description:
       'Verdant Equanim is a <strong>web-based SaaS dashboard</strong> designed to help users manage and monitor services for their own operational needs. The platform focuses on providing a centralized interface where users can organize data, track performance, and control multiple functions from a single dashboard.',
-    roles: ["UX Research", "UI Design"],
+    roles: ["Experience Research", "Visual Design"],
     image: projectVerdant,
     imagePosition: "left" as const,
+    confidential: true,
   },
   {
     title: "LifeSage",
     description:
       'LifeSage is a <strong>dark-theme mobile health tracking application</strong> designed to help users monitor and manage their daily health metrics through integration with a smartwatch. The app collects real-time health data and presents it in a clear, easy-to-understand interface, allowing users to track their physical activity, etc',
-    roles: ["UX Research", "UI Design"],
+    roles: ["Experience Research", "Interface Design"],
     image: projectLifeSage,
     imagePosition: "right" as const,
-    comingSoon: true,
   },
 ];
 
@@ -63,6 +65,7 @@ function ProjectCard({
 }) {
   const ref = useScrollReveal();
   const cardRef = useRef<HTMLDivElement>(null);
+  const { toast } = useToast();
   const isImageRight = project.imagePosition === "right";
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -114,9 +117,24 @@ function ProjectCard({
               <span className="inline-flex items-center gap-1.5 text-[hsl(40_90%_55%)] text-sm font-semibold">
                 Coming Soon <span className="animate-spin text-base">✳︎</span>
               </span>
+            ) : project.confidential ? (
+              <button
+                onClick={() =>
+                  toast({
+                    description:
+                      "Due to confidentiality and privacy considerations, the detailed case study for this project cannot be publicly shared.",
+                  })
+                }
+                className="inline-flex items-center gap-1.5 text-accent text-sm font-medium hover:gap-2.5 transition-all duration-300"
+              >
+                View Project
+                <ArrowUpRight size={14} className="transition-transform duration-300" />
+              </button>
             ) : (
               <a
-                href="#"
+                href={project.link ?? "#"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-accent text-sm font-medium group/link hover:gap-2.5 transition-all duration-300"
               >
                 View Project
