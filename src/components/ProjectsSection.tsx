@@ -32,6 +32,7 @@ const projects = [
     roles: ["Experience Research", "Interface Design"],
     image: projectLifeSage,
     imagePosition: "right" as const,
+    comingSoon: true,
   },
 ];
 
