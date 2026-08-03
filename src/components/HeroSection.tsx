@@ -1,4 +1,4 @@
-import profileImg from "@/assets/profile-hero.jpg";
+import profileImg from "@/assets/profile-hero.png";
 import { useEffect, useState } from "react";
 
 const roles = [
@@ -58,9 +58,8 @@ const HeroSection = () => {
 
       {/* Background faded text */}
       <div
-        className={`absolute top-[12%] left-1/2 -translate-x-1/2 text-ghost font-black text-[4rem] sm:text-[7rem] md:text-[11rem] xl:text-[10rem] leading-none tracking-[-0.06em] select-none pointer-events-none whitespace-nowrap transition-all duration-[1.2s] ease-out ${
-          loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}
+        className={`absolute top-[12%] left-1/2 -translate-x-1/2 text-ghost font-black text-[4rem] sm:text-[7rem] md:text-[11rem] xl:text-[10rem] leading-none tracking-[-0.06em] select-none pointer-events-none whitespace-nowrap transition-all duration-[1.2s] ease-out ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
         aria-hidden="true"
       >
         HI, I'M
@@ -68,31 +67,28 @@ const HeroSection = () => {
 
       {/* Arch photo with ring */}
       <div
-        className={`relative z-10 w-52 h-[17rem] md:w-60 md:h-[20rem] arch-clip overflow-hidden photo-ring-pulse mt-12 transition-all duration-[1s] ease-out delay-200 ${
-          loaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
-        }`}
+        className={`relative z-10 w-52 h-[17rem] md:w-60 md:h-[20rem] arch-clip overflow-hidden photo-ring-pulse mt-12 transition-all duration-[1s] ease-out delay-200 ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          }`}
       >
         <img
           src={profileImg}
           alt="Manav Kaushal"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-110"
         />
       </div>
 
       {/* Big name */}
       <h1
-        className={`relative z-10 text-foreground font-black text-[3.8rem] sm:text-[5.5rem] md:text-[10rem] xl:text-[9rem] leading-[0.82] -mt-8 sm:-mt-12 md:-mt-20 tracking-[-0.05em] hero-name-shadow transition-all duration-[1s] ease-out delay-300 ${
-          loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`relative z-10 text-foreground font-black text-[3.8rem] sm:text-[5.5rem] md:text-[10rem] xl:text-[9rem] leading-[0.82] -mt-8 sm:-mt-12 md:-mt-20 tracking-[-0.05em] hero-name-shadow transition-all duration-[1s] ease-out delay-300 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         MANAV
       </h1>
 
       {/* Typewriter subtitle */}
       <p
-        className={`relative z-10 text-muted-foreground text-base md:text-lg mt-6 text-center font-light tracking-wide transition-all duration-[1s] ease-out delay-500 ${
-          loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-        }`}
+        className={`relative z-10 text-muted-foreground text-base md:text-lg mt-6 text-center font-light tracking-wide transition-all duration-[1s] ease-out delay-500 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
       >
         A{" "}
         <span className="text-foreground font-medium">
@@ -103,9 +99,8 @@ const HeroSection = () => {
 
       {/* Bottom tagline */}
       <div
-        className={`absolute bottom-8 md:bottom-14 left-1/2 -translate-x-1/2 w-full px-6 text-center space-y-1 transition-all duration-[1s] ease-out delay-700 ${
-          loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-        }`}
+        className={`absolute bottom-8 md:bottom-14 left-1/2 -translate-x-1/2 w-full px-6 text-center space-y-1 transition-all duration-[1s] ease-out delay-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
       >
         <p className="text-foreground/90 text-base md:text-xl font-light">
           Design begins in{" "}

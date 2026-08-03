@@ -1,6 +1,6 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import aboutCreativity from "@/assets/about-creativity.jpg";
-import aboutPersonal from "@/assets/about-personal.jpg";
+import aboutPersonal from "@/assets/about-personal.jpeg";
 import aboutNature from "@/assets/about-nature.jpg";
 
 const images = [
@@ -58,7 +58,7 @@ const AboutSection = () => {
           {images.map((img, i) => (
             <div
               key={i}
-              className={`w-[30vw] max-w-[11rem] h-[38vw] max-h-[14rem] md:w-56 md:h-72 rounded-2xl overflow-hidden image-glow group cursor-pointer ${["float-1","float-2","float-3"][i]}`}
+              className={`w-[30vw] max-w-[11rem] h-[38vw] max-h-[14rem] md:w-56 md:h-72 rounded-2xl overflow-hidden image-glow group cursor-pointer ${["float-1", "float-2", "float-3"][i]}`}
             >
               <img
                 src={img.src}
