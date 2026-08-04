@@ -67,7 +67,7 @@ const HeroSection = () => {
 
       {/* Arch photo with ring */}
       <div
-        className={`relative z-10 w-52 h-[17rem] md:w-60 md:h-[20rem] arch-clip overflow-hidden photo-ring-pulse mt-12 transition-all duration-[1s] ease-out delay-200 ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
+        className={`relative z-20 w-64 h-[21rem] md:w-80 md:h-[26rem] arch-clip overflow-hidden photo-ring-pulse mt-12 transition-all duration-[1s] ease-out delay-200 ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
       >
         <img
